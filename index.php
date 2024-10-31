@@ -10,7 +10,7 @@ require 'vendor/phpmailer/phpmailer/src/Exception.php';
 
  
 $mail_app_pwd = $_ENV['mail_app_pwd'];
-echo $mail_app_pwd;exit;
+//echo $mail_app_pwd;exit;
 
 if (isset($_POST['sendMessage'])) {
     $name = $_POST['name'];
@@ -22,7 +22,7 @@ if (isset($_POST['sendMessage'])) {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'kanasayrus.sarah@gmail.com';
-        $mail->Password = 'ndlflwpxxejktotz';//ndlf lwpx xejk totz
+        $mail->Password = $mail_app_pwd;
 
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
@@ -100,30 +100,25 @@ if (isset($_POST['sendMessage'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
     <body class="homepage is-preload">
-        <div class="container">
-            <h2>Alerts</h2>
-            <div class="alert alert-success">
-                <strong>Success!</strong> This alert box could indicate a successful or positive action.
-            </div>
-            <div class="alert alert-info">
-                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
-            </div>
-            <div class="alert alert-warning">
-                <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
-            </div>
-            <div class="alert alert-danger">
-                <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
-            </div>
-        </div>
+        <div id="page-wrapper">
+        
+        
 
-        <div class="alert alert-success">
-            <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
-        </div>
-
-        <div class="alert alert-success alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Success!</strong> Indicates a successful or positive action.
-        </div>
+        <section id="features">
+            <div class="container">
+				<header>
+                    <div class="alert alert-success alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Success!</strong> Indicates a successful or positive action.
+                    </div>
+                    <div class="alert alert-danger alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Error!</strong> This alert box indicates a dangerous or potentially negative action.
+                    </div>
+					<h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
+				</header>
+            </div>
+        </section>
         <section id="footer">
             <div class="container">
                 <header>
@@ -155,5 +150,15 @@ if (isset($_POST['sendMessage'])) {
                 </div>
             </div>
         </section>
+    
+        </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
     </body>
 </html>
