@@ -66,14 +66,12 @@ if (isset($_POST['sendMessage'])) {
             </table>
         </body>";
         $mail->AltBody = 'This is the body of new contact message';
-        if ($mail->send()) {           
-            exit('oui'); 
+        if ($mail->send()) {
             $_SESSION['success'] = 'Message envoyé avec succès';
             $success = $_SESSION['success'];
             unset($_SESSION['success']);
             //header('Location: login');  
         } else {
-            exit('non');
             $_SESSION['err'] = "Échec, veuillez réessayer plus tard";        
             $err = $_SESSION['err'];
             unset($_SESSION['err']);

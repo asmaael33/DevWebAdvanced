@@ -286,19 +286,21 @@
 						<div class="row">
 							<div class="col-6 col-12-medium">
 								<section>
-									<form method="post" action="#">
+									<form method="POST" action="index.php">
 										<div class="row gtr-50">
 											<div class="col-6 col-12-small">
-												<input name="name" placeholder="Name" type="text" />
+												<input name="name" placeholder="Name" type="text" required />
 											</div>
 											<div class="col-6 col-12-small">
-												<input name="email" placeholder="Email" type="text" />
+												<input name="email" placeholder="Email" type="email" />
 											</div>
 											<div class="col-12">
 												<textarea name="message" placeholder="Message"></textarea>
 											</div>
 											<div class="col-12">
-												<a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
+												<button class="form-button-submit button icon solid fa-envelope" type="submit" name="sendMessage">
+													Send Message
+												</button>
 											</div>
 										</div>
 									</form>
