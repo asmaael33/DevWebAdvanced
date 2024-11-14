@@ -68,13 +68,13 @@ if (isset($_POST['sendMessage'])) {
         $mail->AltBody = 'This is the body of new contact message';
         if ($mail->send()) {
             $_SESSION['success'] = 'Message envoyé avec succès';
-            $success = $_SESSION['success'];
-            unset($_SESSION['success']);
+            //$success = $_SESSION['success'];
+            //unset($_SESSION['success']);
             //header('Location: login');  
         } else {
             $_SESSION['err'] = "Échec, veuillez réessayer plus tard";        
-            $err = $_SESSION['err'];
-            unset($_SESSION['err']);
+            //$err = $_SESSION['err'];
+            //unset($_SESSION['err']);
         }
     
     } catch (Exception $e) {
@@ -99,19 +99,30 @@ if (isset($_POST['sendMessage'])) {
 	</head>
     <body class="homepage is-preload">
         <div id="page-wrapper">
-        
-        
-
         <section id="features">
             <div class="container">
 				<header>
                     <div class="alert alert-success alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Success!</strong> Indicates a successful or positive action.
+                        <strong>
+                            <?php 
+                                if (isset($_SESSION['success'])) {
+                                 echo $_SESSION['success']; 
+                                unset($_SESSION['success']);
+                                }
+                            ?>
+                        </strong> 
                     </div>
                     <div class="alert alert-danger alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Error!</strong> This alert box indicates a dangerous or potentially negative action.
+                        <strong>
+                            <?php 
+                                if (isset($_SESSION['err'])) {
+                                    echo $_SESSION['err'];
+                                    unset($_SESSION['err']);
+                                }
+                            ?>
+                        </strong>
                     </div>
 					<h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
 				</header>

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\vendor\\phpmailer\\phpmailer"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\index.php",
   "PreviewInSolutionExplorer": false
 }
