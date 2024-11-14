@@ -50,6 +50,7 @@ class ComposerStaticInit2782e34f8d15a5a94212a6c53a77c29e
             'Symfony\\Component\\Serializer\\' => 29,
             'Symfony\\Component\\PropertyInfo\\' => 31,
             'Symfony\\Component\\PropertyAccess\\' => 33,
+            'Symfony\\Component\\PasswordHasher\\' => 33,
             'Symfony\\Component\\Cache\\' => 24,
             'Svg\\' => 4,
             'Sabberworm\\CSS\\' => 15,
@@ -179,6 +180,10 @@ class ComposerStaticInit2782e34f8d15a5a94212a6c53a77c29e
         'Symfony\\Component\\PropertyAccess\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/property-access',
+        ),
+        'Symfony\\Component\\PasswordHasher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/password-hasher',
         ),
         'Symfony\\Component\\Cache\\' => 
         array (

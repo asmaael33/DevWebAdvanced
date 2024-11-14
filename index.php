@@ -2,13 +2,6 @@
 /* Config file with sensitive info */
 require_once('config.php');
 
-
-/* Mailer Configurations */
-require 'vendor/phpmailer/phpmailer/src/SMTP.php';
-require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require 'vendor/phpmailer/phpmailer/src/Exception.php';
-
- 
 $mail_app_pwd = $_ENV['mail_app_pwd'];
 //echo $mail_app_pwd;exit;
 
